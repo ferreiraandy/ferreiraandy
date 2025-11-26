@@ -30,6 +30,14 @@ check_command() {
     fi
 }
 
+# Verificar sistema operacional
+if [ -f /etc/debian_version ]; then
+    DEBIAN_VERSION=$(cat /etc/debian_version)
+    echo "Sistema: Debian $DEBIAN_VERSION"
+    echo "Para instalar dependências: ./scripts/install_dependencies_debian.sh"
+    echo ""
+fi
+
 # Verificar ADB
 echo "1. Verificando ADB..."
 if check_command adb; then
@@ -37,7 +45,11 @@ if check_command adb; then
     echo "   Versão: $ADB_VERSION"
 else
     echo -e "${YELLOW}   Instale o Android SDK Platform Tools${NC}"
-    echo "   https://developer.android.com/tools/releases/platform-tools"
+    if [ -f /etc/debian_version ]; then
+        echo "   Debian: ./scripts/install_dependencies_debian.sh"
+    else
+        echo "   https://developer.android.com/tools/releases/platform-tools"
+    fi
     ((ERRORS++))
 fi
 

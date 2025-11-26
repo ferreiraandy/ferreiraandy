@@ -16,6 +16,13 @@
 
 ## 📋 Pré-requisitos
 
+### Sistema Operacional
+Este guia é otimizado para **Debian 13**. Se estiver usando Debian 13, consulte **[DEBIAN_13.md](DEBIAN_13.md)** para instruções específicas e execute:
+
+```bash
+./scripts/install_dependencies_debian.sh
+```
+
 ### Hardware Necessário
 - Computador com Windows/Linux/Mac
 - Cabo USB de boa qualidade

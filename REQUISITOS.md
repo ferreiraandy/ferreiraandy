@@ -3,9 +3,12 @@
 ## 💻 Computador
 
 ### Sistema Operacional
+- ✅ **Debian 13** (Trixie) - Este guia é otimizado para Debian 13
 - ✅ **Windows 10/11** (recomendado para Mi Unlock Tool)
-- ✅ **Linux** (Ubuntu, Debian, etc.)
+- ✅ **Linux** (Ubuntu, outras distribuições)
 - ✅ **macOS** (com algumas limitações)
+
+**Nota**: Para Debian 13, consulte **[DEBIAN_13.md](DEBIAN_13.md)** para instruções específicas.
 
 ### Especificações Mínimas
 - Processador: Qualquer processador moderno
@@ -34,13 +37,29 @@
 2. Extraia em uma pasta (ex: `C:\platform-tools`)
 3. Adicione ao PATH ou use do diretório
 
-#### Linux
+#### Linux (Debian 13)
 ```bash
-# Ubuntu/Debian
+# Debian 13 - Instalação via apt
 sudo apt update
 sudo apt install android-tools-adb android-tools-fastboot
 
-# Ou baixe do site oficial
+# Ou use o script de instalação automática
+./scripts/install_dependencies_debian.sh
+
+# Para instruções detalhadas, consulte: DEBIAN_13.md
+```
+
+#### Linux (Outras distribuições)
+```bash
+# Ubuntu
+sudo apt update
+sudo apt install android-tools-adb android-tools-fastboot
+
+# Fedora
+sudo dnf install android-tools
+
+# Arch Linux
+sudo pacman -S android-tools
 ```
 
 #### macOS
@@ -131,11 +150,13 @@ Este script verifica:
 
 ### Fastboot não funciona
 1. Verifique se o dispositivo está em modo fastboot
-2. No Linux, pode precisar de permissões:
+2. No Debian/Linux, configure regras udev (veja DEBIAN_13.md)
+3. Se ainda não funcionar, use temporariamente:
    ```bash
    sudo fastboot devices
    ```
-3. Tente outro cabo/porta USB
+4. Tente outro cabo/porta USB
+5. **Debian 13**: Execute `./scripts/install_dependencies_debian.sh` para configurar tudo
 
 ### Mi Unlock Tool não funciona
 1. Use Windows (funciona melhor)

@@ -4,6 +4,7 @@
 
 ### 🚀 Para Começar
 - **[GUIA_RAPIDO.md](GUIA_RAPIDO.md)** - Guia rápido com comandos essenciais
+- **[DEBIAN_13.md](DEBIAN_13.md)** - Guia específico para Debian 13 ⭐
 - **[REQUISITOS.md](REQUISITOS.md)** - Requisitos do sistema e software necessário
 - **[README.md](README.md)** - Guia completo passo a passo
 - **[ROMS_COMPATIVEL_WALLET.md](ROMS_COMPATIVEL_WALLET.md)** - Lista de ROMs compatíveis com Google Wallet
@@ -13,6 +14,7 @@
 Todos os scripts estão na pasta `scripts/` e são executáveis.
 
 ### Verificação e Preparação
+- **`install_dependencies_debian.sh`** - Instala dependências no Debian 13 ⭐
 - **`check_prerequisites.sh`** - Verifica pré-requisitos (ADB, Fastboot, conexão)
 - **`check_bootloader.sh`** - Verifica status do bootloader
 - **`check_device_compatibility.sh`** - Verifica compatibilidade do dispositivo
@@ -81,10 +83,12 @@ Consulte **[ROMS_COMPATIVEL_WALLET.md](ROMS_COMPATIVEL_WALLET.md)** para:
 /workspace/
 ├── README.md                      # Guia completo
 ├── GUIA_RAPIDO.md                 # Guia rápido
+├── DEBIAN_13.md                    # Guia específico Debian 13 ⭐
 ├── REQUISITOS.md                   # Requisitos do sistema
 ├── ROMS_COMPATIVEL_WALLET.md      # Lista de ROMs
 ├── INDEX.md                       # Este arquivo
 └── scripts/
+    ├── install_dependencies_debian.sh  # Instala dependências Debian ⭐
     ├── check_prerequisites.sh
     ├── check_bootloader.sh
     ├── check_device_compatibility.sh

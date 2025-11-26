@@ -2,6 +2,14 @@
 
 ## ⚡ Início Rápido
 
+### 0. Instalar Dependências (Debian 13)
+```bash
+# Se estiver no Debian 13, instale dependências primeiro
+./scripts/install_dependencies_debian.sh
+
+# Consulte DEBIAN_13.md para detalhes
+```
+
 ### 1. Verificar Pré-requisitos
 ```bash
 ./scripts/check_prerequisites.sh
